@@ -4,12 +4,12 @@ import { addQuestionToUser, saveAnswerToUser } from './users'
 
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
-export const ADD_QUESTIONS = 'ADD_QUESTIONS'
+export const ADD_QUESTION = 'ADD_QUESTION'
 export const ANSWER_QUESTION = 'ANSWER_QUESTION'
 
 function addQuestion (question) {
     return {
-        type: ADD_QUESTIONS,
+        type: ADD_QUESTION,
         question,
     }
 }

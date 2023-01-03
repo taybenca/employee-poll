@@ -5,7 +5,7 @@ export function formatDate (timestamp) {
   }
   
 export function formatQuestion (question, author, authedUser) {
-    const { id, firstOption, secondOption, timestamp } = question
+    const { id, optionOne, optionTwo, timestamp } = question
     const { name, avatarURL } = author
   
     return {
@@ -13,14 +13,14 @@ export function formatQuestion (question, author, authedUser) {
         id,
         timestamp: formatDate(timestamp),
         avatar: avatarURL,
-        firstOptionText: firstOption.text,
-        firstOptionVotes: firstOption.votes,
-        secondOptionText: secondOption.text,
-        secondOptionVotes: secondOption.votes,
+        optionOneText: optionOne.text,
+        optionOneVotes: optionOne.votes,
+        optionTwoText: optionTwo.text,
+        optionTwoVotes: optionTwo.votes,
         isAnswered: 
-            firstOption.votes.includes(authedUser) ||
-            secondOption.votes.includes(authedUser) ? true : false,
-        isFirstOptionVoted: firstOption.votes.includes(authedUser),
-        isSecondOptionVoted: secondOption.votes.includes(authedUser)
+            optionOne.votes.includes(authedUser) ||
+            optionTwo.votes.includes(authedUser) ? true : false,
+        isOptionOneVoted: optionOne.votes.includes(authedUser),
+        isOptionTwoVoted: optionTwo.votes.includes(authedUser)
     }
 }
