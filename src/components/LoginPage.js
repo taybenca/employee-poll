@@ -3,9 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setAuthedUser } from '../actions/authedUser'
 
-
-export const LoginPage = (props) => {
-    
+const LoginPage = (props) => {
+    console.log(props)
     const [selectedUser, setSelectedUser] = useState("none");
     const navigate = useNavigate();
     const location = useLocation();
@@ -23,21 +22,20 @@ export const LoginPage = (props) => {
 
     return (
         <div>
-            <h3>Login</h3>
+            <h1>Welcome to Employee Poll</h1>
+            <h3>Please select your username:</h3>
             <form onSubmit={onSubmit}>
             <select
                 className="login"
                 defaultValue={"none"}
                 onChange={onChange}
             >
-                <option value="disabled" disabled> Username </option>
+                <option value="none" disabled> Username </option>
                 {props.users.map((user) => (
                     <option key={user.id} value={user.id}>
                         {user.name}
                     </option>
                 ))}
-                <option value="id:1">Person 1</option>
-                <option value="id:2">Person 2</option>
             </select>
             <button
                 type="submit"
@@ -58,4 +56,4 @@ const mapStateToProps = ({ authedUser, users }) => {
     };
   };
   
-  export default connect(mapStateToProps)(LoginPage);
+export default connect(mapStateToProps)(LoginPage);

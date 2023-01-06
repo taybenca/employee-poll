@@ -1,13 +1,14 @@
 import './App.css';
-import { LoginPage } from './components/loginPage';
-import { Routes, Route } from 'react-router-dom'
-import { useEffect } from 'react'
-import { handleInitialData } from './actions/shared'
-import { connect } from 'react-redux'
-import { LoadingBar } from 'react-redux-loading-bar'
-import AuthorisedRoute from './components/AuthorisedRoute'
-import Navbar from './components/Navbar'
-import Dashboard from './components/Dashboard'
+import LoginPage from './components/LoginPage';
+import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { handleInitialData } from './actions/shared';
+import { connect } from 'react-redux';
+import { LoadingBar } from 'react-redux-loading-bar';
+import AuthorisedRoute from './components/AuthorisedRoute';
+import Navbar from './components/Navbar';
+import HomePage from './components/HomePage';
+import PollPage from './components/PollPage';
 
 function App(props) {
 
@@ -21,7 +22,7 @@ function App(props) {
       mounted = false
     }
   }, [])
-
+console.log(props)
 
   return (
     <div className="App">
@@ -33,7 +34,7 @@ function App(props) {
             path="/"
             element={
               <AuthorisedRoute>
-                <Dashboard />
+                <HomePage />
               </AuthorisedRoute>
             }
           />
@@ -60,7 +61,7 @@ function App(props) {
             path="/questions/:id"
             element={
               <AuthorisedRoute>
-                {/* <PollPage /> */}
+                <PollPage />
               </AuthorisedRoute>
             }
           />
@@ -77,3 +78,5 @@ const mapStateToProps = ({ authedUser }) => ({
 });
 
 export default connect(mapStateToProps)(App);
+
+

@@ -2,7 +2,7 @@ import {
     RECEIVE_QUESTIONS,
     ADD_QUESTION,
     ANSWER_QUESTION,
-} from "../actions/questions.js";
+} from "../actions/questions";
   
 export default function users (state = {}, action) {
     switch (action.type) {
@@ -33,4 +33,3 @@ export default function users (state = {}, action) {
         return state;
     }
 }
-  
