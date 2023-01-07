@@ -1,6 +1,20 @@
-# <div align=center> Employee Polls Project - Udacity <div>
+# <div align=center> Employee Polls Project - Udacity </div>
+<div align=center> This is my final project for completing the Udacity React course.
 
-<img src="./public/screenshot.png">
+***
+<img src="	https://img.shields.io/badge/Udacity-grey?style=for-the-badge&logo=udacity&logoColor=#5FCFEE">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+<img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white">
+<img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"></div>
+
+
+
+The project is a poll of employees of a company where they answer questions, create new ones and can see who is leading with more questions created and answered. I used Redux on the backend side and React on the frontend. I planned the project views on excalidraw, used Jest for my unit tests and CSS for styling.
+
+
+<div align="center"><img src="./public/screenshot.png" width="400"></div>
 
 ## How to run the project:
 
@@ -14,11 +28,6 @@ npm start
 ```
 npm run test
 ```
-
-This is the starter code for the final assessment project for Udacity's React & Redux course.
-The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
-
-Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
 
 ## Data
 
