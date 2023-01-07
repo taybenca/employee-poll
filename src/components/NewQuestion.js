@@ -39,6 +39,7 @@ const NewQuestion = ({ dispatch }) => {
                             placeholder="Option One..."
                             onChange={onChangeOptionOne}
                             className="poll-select"
+                            data-testid='option-one'
                         />
                     </div>
                     <div>
@@ -49,12 +50,14 @@ const NewQuestion = ({ dispatch }) => {
                             placeholder="Option Two..."
                             onChange={onChangeOptionTwo}
                             className="poll-select"
+                            data-testid='option-two'
                         />
                     </div>
                 </div>
                 <div>
                     <button
                         className="button"
+                        data-testid='submit-question'
                         disabled={optionOneText === "" || optionTwoText === ""}
                     >
                     Add question

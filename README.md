@@ -1,7 +1,21 @@
-# Employee Polls Project
+# <div align=center> Employee Polls Project - Udacity <div>
+
+<img src="./public/screenshot.png">
+
+## How to run the project:
+
+```
+npm install
+npm start 
+```
+
+## How to run the tests:
+
+```
+npm run test
+```
 
 This is the starter code for the final assessment project for Udacity's React & Redux course.
-
 The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
 
 Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
@@ -96,3 +110,14 @@ Your code will talk to the database via 4 methods:
 | qid | String | The id of the question that was answered|
 | answer | String | The option the user selected. The value should be either `"optionOne"` or `"optionTwo"`|
 
+
+## Resources
+Chipper project from Udacity: https://github.com/udacity/cd0547-react-chirper-app
+
+React Course from Udacity: https://www.udacity.com/course/react-nanodegree--nd019
+
+Jest Documentation:  https://jestjs.io/
+
+React Documentation: https://beta.reactjs.org/
+
+Avatar from: https://vinicius73.github.io/gravatar-url-generator/#/
