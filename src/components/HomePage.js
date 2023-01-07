@@ -33,36 +33,35 @@ const HomePage = (props) => {
     };
 
     return (
-        <div className="dashboard-container">
+        <div>
             <h2>Hello {props.user.name}!</h2>
-            <form className="dashboard-list-selectors">
-                <label>
-                <input
-                    type="radio"
-                    name="answered"
-                    checked={answered}
-                    value={answered}
-                    onChange={onChangeAnswered}
-                />
-                Answered
-                </label>
-
-                <label className="label-right">
-                <input
-                    type="radio"
-                    name="unanswered"
-                    checked={unanswered}
-                    value={unanswered}
-                    onChange={onChangeUnanswered}
-                />
-                Unanswered
-                </label>
+            <form>
+                <span className="homepage-input">
+                    <input
+                        type="radio"
+                        name="unanswered"
+                        checked={unanswered}
+                        value={unanswered}
+                        onChange={onChangeUnanswered}
+                    />
+                    New questions
+                </span>
+                <span className="homepage-input">
+                    <input
+                        type="radio"
+                        name="answered"
+                        checked={answered}
+                        value={answered}
+                        onChange={onChangeAnswered}
+                    />
+                    Done
+                </span>
             </form>
             {filteredUnanswered.length === 0 && unanswered && (
-                <div>No new polls! Go Create Some!</div>
+                <div className="empty">Thanks for answering all the questions! 🥰</div>
             )}
             {filteredAnswered.length === 0 && !unanswered && (
-                <div>No polls answered!</div>
+                <div className="empty">You didn't answer any question yet 😔</div>
             )}
         <div>
             {unanswered

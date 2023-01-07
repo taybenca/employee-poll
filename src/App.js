@@ -9,6 +9,9 @@ import AuthorisedRoute from './components/AuthorisedRoute';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import PollPage from './components/PollPage';
+import NewQuestion from './components/NewQuestion'
+import LeaderboardPage from './components/LeaderboardPage';
+import Error404Page from './components/Error404Page';
 
 function App(props) {
 
@@ -43,7 +46,7 @@ console.log(props)
             path="/add"
             element={
               <AuthorisedRoute>
-                {/* <NewPoll /> */}
+                <NewQuestion />
               </AuthorisedRoute>
             }
           />
@@ -52,7 +55,7 @@ console.log(props)
             path="/leaderboard"
             element={
               <AuthorisedRoute>
-                {/* <Leaderboard /> */}
+                <LeaderboardPage />
               </AuthorisedRoute>
             }
           />
@@ -66,7 +69,7 @@ console.log(props)
             }
           />
           <Route path="/login" element={<LoginPage />} />
-          {/* <Route path="/404" element={<Error404Page />} /> */}
+          <Route path="*" element={<Error404Page />} />
         </Routes>
       </div>
     </div>

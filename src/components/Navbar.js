@@ -10,8 +10,16 @@ const Navbar = (props) => {
     };
 
     return (
-        <div className="navbar-container">
+        <div>
             <nav className="navbar">
+                <span className="navbar-element">
+                    <img
+                      className="navbar-user-img"
+                      alt="user-avatar"
+                      src={props.user.avatarURL}
+                    />
+                  Hello, {props.user.name}!
+                </span>
                 <Link to="/" className="navbar-element">
                     Homepage
                 </Link>
@@ -21,26 +29,17 @@ const Navbar = (props) => {
                 <Link to="/leaderboard" className="navbar-element">
                     Leaderboard
                 </Link>
-                <span className="navbar-element navbar-user">
-                    <img
-                      className="navbar-user-img"
-                      alt="Authorised User Avatar"
-                      src={props.user.avatarURL}
-                    />{" "}
-                  {props.user.name}
-                </span>
-              <Link
-                  to="/login"
-                  state={{ from: location }}
-                  replace
-                  className="navbar-element"
-              >
-                  <button onClick={onClickLogout} className="btn btn-logout">
-                      Logout
-                  </button>
-              </Link>
-          </nav>
-         <hr />
+                <Link
+                    to="/login"
+                    state={{ from: location }}
+                    replace
+                    className="navbar-element"
+                >
+                <button onClick={onClickLogout} className="button">
+                    Logout
+                </button>
+                </Link>
+          </nav>      
       </div>
     );
 };

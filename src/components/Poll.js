@@ -8,15 +8,15 @@ const Poll = (props) => {
     return (
         <div className="parent-card">
             <div className="card-poll">
-            <Link to={`questions/${id}`} className="poll">
+            <Link to={`questions/${id}`}>
                 <img
                 src={avatar}
-                alt="Poll Author Avatar"
+                alt="author-avatar"
                 className="homepage-avatar"
                 />
-                <h5>{name}</h5>
-                <p>{timestamp}</p>
-                <button className="btn btn-homepage-view">View</button>
+                <h4>{name}</h4>
+                <h5>{timestamp}</h5>
+                <button className="button">View</button>
             </Link>
             </div>
         </div>

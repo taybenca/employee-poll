@@ -1,40 +1,34 @@
+/* All app */
+
 .App {
   text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button {
+  background-color: #cd8de9;
+  border: none;
   color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navbar */
+.navbar {
+  background-color: #cd8de9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-element {
+  text-decoration: none;
+  margin: 20px;
+  padding: 5px;
 }
 
 .navbar-user-img {
@@ -42,10 +36,42 @@
   width: 50px;
 }
 
+/* HomePage */
+
 .homepage-avatar {
   height: 70px;
   width: 70px;
 }
+
+
+.container {
+  padding: 2px 16px;
+}
+
+.empty {
+  padding-top: 50px;
+}
+
+.homepage-input {
+  padding: 50px;
+}
+
+/* Login */
+
+.login-select {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 20px
+}
+
+.img-login {
+  width: 200px;
+  height: 200px;
+  margin: 80px;
+}
+
+/* Each Poll */
 
 .parent-card {
   display: grid;
@@ -53,7 +79,6 @@
 }
 
 .card-poll {
-  /* Add shadows to create the "card" effect */
   box-shadow: 4px 8px 16px 4px rgba(0,0,0,0.2);
   transition: 0.3s;
   margin: 20px;
@@ -61,13 +86,55 @@
   width: 400px;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card-poll:hover {
   box-shadow: 4px 16px 32px 4px rgba(0,0,0,0.2);
   padding: 30px;
 }
 
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
+.avatar-poll {
+  width: 200px;
+  height: 250px;
+}
+
+.poll-option {
+  border-style: solid;
+  margin: 20px;
+  padding: 10px;
+  border-color: #863aa7;
+}
+
+.button-vote {
+  background-color: #cd8de9;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+/* New question */
+
+.poll-select {
+  width: 600px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px
+}
+
+/* Leaderboard */
+
+.avatar-table {
+  height: 120px;
+  width: 70px;
+}
+
+table {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
 }

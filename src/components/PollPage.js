@@ -65,43 +65,44 @@ const PollPage = (props) => {
         <div>
         <div>
             <h3>Poll by {name}</h3>
-            <h6>at {timestamp}</h6>
-            <img src={avatar} alt="Poll Author Avatar" />
-            <h2>Would you rather?</h2>
+            <img 
+                src={avatar} 
+                alt="author-avatar"
+                className="avatar-poll"    
+            />
+            <h2>Would You Rather . . .</h2>
         </div>
         {!isAnswered ? (
-            <div className="poll-page-options-container">
-            <div className="poll-page-option">
-                <p>{optionOneText}</p>
-                <button onClick={onChangeVoteOne} className="btn btn-vote">
-                Vote
-                </button>
-            </div>
-            <div className="poll-page-option">
-                <p>{optionTwoText}</p>
-                <button onClick={onChangeVoteTwo} className="btn btn-vote">
-                Vote
-                </button>
-            </div>
+            <div>
+                <div className="poll-option">
+                    <p>{optionOneText}</p>
+                    <button onClick={onChangeVoteOne} className="button-vote">
+                    Vote
+                    </button>
+                </div>
+                <div className="poll-option">
+                    <p>{optionTwoText}</p>
+                    <button onClick={onChangeVoteTwo} className="button-vote">
+                    Vote
+                    </button>
+                </div>
+                <p>Poll created at {timestamp}</p>
             </div>
         ) : (
-            <div className="poll-page-answers-container">
-            <div
-                className={isOptionOneVoted ? "option-voted" : "poll-page-option "}
-            >
-                <p>{optionOneText}</p>
-                <p>
-                Votes: {optionOneVotes.length} -{" "}
-                {calculatePercent(optionOneVotes.length, totalVotes)} %
-                </p>
-            </div>
-            <div
-                className={isOptionTwoVoted ? "option-voted" : "poll-page-option "}
-            >
-                <p>{optionTwoText}</p>
-                Votes: {optionTwoVotes.length} -{" "}
-                {calculatePercent(optionTwoVotes.length, totalVotes)} %
-            </div>
+            <div>
+                <div className="poll-option">
+                    <h3>{optionOneText}</h3>
+                    {optionOneVotes.length} people voted in this option.
+                    This means {calculatePercent(optionOneVotes.length, totalVotes)}% of the votes.
+                    <p style={{color:'magenta'}}><b>{isOptionOneVoted ? "YOU CHOOSE THIS OPTION!" : false}</b></p>
+                </div>
+                <div className="poll-option">
+                    <h3>{optionTwoText}</h3>
+                    {optionTwoVotes.length} people voted in this option.
+                    This means {calculatePercent(optionTwoVotes.length, totalVotes)}% of the votes.
+                    <p style={{color:'magenta'}}><b>{isOptionTwoVoted ? "YOU CHOOSE THIS OPTION!" : false}</b></p>
+                </div>
+                <p>Poll created at {timestamp}</p>
             </div>
         )}
         </div>

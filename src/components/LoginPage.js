@@ -22,29 +22,36 @@ const LoginPage = (props) => {
 
     return (
         <div>
-            <h1>Welcome to Employee Poll</h1>
-            <h3>Please select your username:</h3>
+            <h1>Welcome to Employee Poll 🎉</h1>
+            <h3>Please select your Name:</h3>
             <form onSubmit={onSubmit}>
             <select
-                className="login"
+                className="login-select"
                 defaultValue={"none"}
                 onChange={onChange}
             >
-                <option value="none" disabled> Username </option>
+                <option value="none" disabled> Name </option>
                 {props.users.map((user) => (
                     <option key={user.id} value={user.id}>
                         {user.name}
                     </option>
                 ))}
             </select>
-            <button
-                type="submit"
-                className="btn-login"
-                disabled={selectedUser === "none" ? true : false}
-            >
-                Login
-            </button>
+            <div>
+                <button
+                    type="submit"
+                    className="button"
+                    disabled={selectedUser === "none" ? true : false}
+                >
+                    Login
+                </button>
+            </div>   
             </form>
+            <img 
+                src="https://robohash.org/bbc16eeff73a86b27c4c688dc91eecfa?set=set4&bgset=&size=400x400"
+                alt="pink-cat"
+                className='img-login'
+            />
         </div>
     )
 }
